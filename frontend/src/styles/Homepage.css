@@ -21,7 +21,7 @@ body:has(.home-page) {
   --home-food-width: 180px;
   --home-dish-width: 224px;
   --home-restaurant-width: 244px;
-  width: 100%;
+  width: 80%;
   min-width: 0;
   min-height: 100vh;
   padding: 0 0 24px;
