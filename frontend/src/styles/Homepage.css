@@ -1,4 +1,8 @@
 /* DISH DASH — COMPACT CUSTOMER HOME */
+body:has(.home-page) {
+  margin: 0;
+}
+
 .home-page {
   --home-navy: var(--brand-navy, #071a2b);
   --home-navy-light: #0d2940;
@@ -65,8 +69,9 @@
 }
 
 .home-page .home-container {
-  width: min(1480px, calc(100% - 32px));
-  margin-inline: auto;
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
 }
 
 .home-page .home-sr-only {
@@ -492,7 +497,7 @@
   min-width: 0;
   overflow-x: auto;
   overflow-y: hidden;
-  padding: 5px 3px 12px;
+  padding: 5px 0 12px;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scroll-padding-inline: 3px;
@@ -535,6 +540,12 @@
 
 .home-page .home-slider--foods {
   --home-card-width: var(--home-food-width);
+}
+
+/* Expand short card rows to the edges; preserve horizontal scrolling when full. */
+.home-page .home-slider--categories > *,
+.home-page .home-slider--foods > * {
+  flex-grow: 1;
 }
 
 .home-page .home-slider--dishes {
@@ -1218,7 +1229,7 @@
     --home-restaurant-width: 226px;
   }
   .home-page .home-container {
-    width: calc(100% - 24px);
+    width: 100%;
   }
   .home-page .home-discovery {
     padding: 19px 0 16px;
